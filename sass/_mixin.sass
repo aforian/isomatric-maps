@@ -1,0 +1,158 @@
+//容許選取文字
+@mixin user-select($value: none)
+	-moz-user-select: $value
+	-webkit-user-select: $value
+
+//絕對定位置中
+@mixin ab_center()
+	position: absolute
+	top: 50%
+	left: 50%
+	+transform(translate(-50%,-50%))
+
+//transition
+@mixin transition($value...)
+	-moz-transition: $value
+	-o-transition: $value
+	-webkit-transition: $value
+	transition: $value
+
+@mixin transition_delay($delay: 0s)
+	-webkit-transition-delay: $delay
+	transition-delay: $delay
+
+@mixin filter($value)
+	-webkit-filter: $value
+	-moz-filter: $value
+	-o-filter: $value
+	filter: $value
+
+//背景置中
+@mixin bg_center()
+	background-color: transparent
+	background-position: 50% 50%
+	background-repeat: no-repeat
+
+@mixin flex_box($direction: row, $just: center, $align: center)
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	-webkit-flex-direction: $direction
+	flex-direction: $direction
+	-webkit-justify-content: $just
+	justify-content: $just
+	-webkit-align-items: $align
+	align-items: $align
+
+//flex盒子置中
+@mixin flex_center
+	+flex_box
+	-webkit-justify-content: center
+	justify-content: center
+	-webkit-align-items: center
+	align-items: center
+
+@mixin box-shadow($value...)
+	-webkit-box-shadow: $value
+	-moz-box-shadow: $value
+	box-shadow: $value
+
+@mixin transform($value)
+	-ms-transform: $value
+	-webkit-transform: $value
+	transform: $value
+
+@mixin transform-origin($value: center center)
+	-webkit-transform-origin: $value
+	-moz-transform-origin: $value
+	-ms-transform-origin: $value
+	-o-transform-origin: $value
+
+@mixin border-radius($value)
+	-webkit-border-radius: $value
+	-moz-border-radius: $value
+	border-radius: $value
+
+@mixin filter($value)
+	-webkit-filter: $value
+	filter: $value
+
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+=animation($content...)
+	-webkit-animation: $content
+	-moz-animation: $content
+	-o-animation: $content
+	animation: $content
+
+.full_href
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 10
+
+@mixin bg_rainbow($size: 1000% 300%)
+	ackground: -webkit-linear-gradient(-45deg, #ff5654 0%, #ff9e59 22%, #ffe97f 40%, #6ef4c1 62%, #70e0f4 81%, #978cea 100%)
+	background: -moz-linear-gradient(-45deg, #ff5654 0%, #ff9e59 22%, #ffe97f 40%, #6ef4c1 62%, #70e0f4 81%, #978cea 100%)
+	background: linear-gradient(-45deg, #ff5654 0%, #ff9e59 22%, #ffe97f 40%, #6ef4c1 62%, #70e0f4 81%, #978cea 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8e8c', endColorstr='#978cea',GradientType=1 )
+	
+	background-size: $size
+
+@mixin rainbow($time: 12s,$size: 1000% 300%, $value: ease infinite alternate)
+	background: -webkit-linear-gradient(-45deg, #ff5654 0%, #ff9e59 22%, #ffe97f 40%, #6ef4c1 62%, #70e0f4 81%, #978cea 100%)
+	background: -moz-linear-gradient(-45deg, #ff5654 0%, #ff9e59 22%, #ffe97f 40%, #6ef4c1 62%, #70e0f4 81%, #978cea 100%)
+	background: linear-gradient(-45deg, #ff5654 0%, #ff9e59 22%, #ffe97f 40%, #6ef4c1 62%, #70e0f4 81%, #978cea 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8e8c', endColorstr='#978cea',GradientType=1 )
+	background-size: $size
+	background-position: 0% 50%
+	+animation(color_flow $time $value)
+
+
+@mixin close($width: 30px, $height: 2px, $color: #fff)
+	position: relative
+	width: $width + 20px
+	height: $width + 20px
+	&:before, &:after
+		content: ""
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: 50%
+		height: $height
+		width: $width
+		background-color: $color
+	&:before
+		+transform(translate(-50%,-50%) rotate(45deg))
+	&:after
+		+transform(translate(-50%,-50%) rotate(-45deg))
+
+@mixin device-width($max: 0px, $min: 0px)
+	@if $min == 0px
+		@media screen and (max-width: $max)
+			@content 
+	@else if $mamx == 0px
+		@media screen and (min-width: $min)
+			@content
+	@else
+		@media screen and (min-width: $min)
+			@content 
+
+
+[v-cloak] 
+	display: none
+	opacity: 0
+	+transition(0.3s)
+	

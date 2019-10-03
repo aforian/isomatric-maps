@@ -1,0 +1,770 @@
+@import mixin
+
++keyframes(c1_1)
+	0%, 100%
+		+transform(rotate(0deg))
+	100%
+		+transform(rotate(-360deg))
+
++keyframes (c1_2)
+	0%
+		stroke-width: 0
+
+	10%
+		stroke-width: 8
+
+	75%
+		stroke-width: 8
+
+	90%
+		stroke-width: 0
+
+	100%
+		stroke-width: 0
+
+
++keyframes (c1_3)
+	/*第一段*/
+	0%
+		stroke-dasharray: 104,156
+		stroke-dashoffset: -52
+
+	16%
+		stroke-dasharray: 1,156
+		stroke-dashoffset: -52
+	/*第二段*/
+	16.01%
+		stroke-dasharray: 1,156
+		stroke-dashoffset: -208
+	33%
+		stroke-dasharray: 104,52
+		stroke-dashoffset: -104
+	/*第三段*/
+	33.01%
+		stroke-dasharray: 104,52
+		stroke-dashoffset: -104
+	49%
+		stroke-dasharray: 1,156
+		stroke-dashoffset: -104
+	/*第四段*/
+	49.01%
+		stroke-dasharray: 1,156
+		stroke-dashoffset: 52
+	66%
+		stroke-dasharray: 104,52
+		stroke-dashoffset: 156
+	/*第五段*/
+	66.01%
+		stroke-dasharray: 104,52
+		stroke-dashoffset: 156
+	82%
+		stroke-dasharray: 1,156
+		stroke-dashoffset: 156
+	/*第六段*/
+	82.01%
+		stroke-dasharray: 1,156
+		stroke-dashoffset: 156
+	99.99%
+		stroke-dasharray: 104,52
+		stroke-dashoffset: 256
+
+
+
+
++keyframes(opacity-spread-water)
+	0%
+		opacity: 0
+	30%
+		opacity: 0
+	40%
+		opacity: 1
+	50%
+		opacity: 0
+	55%
+		opacity: 1
+	65%
+		opacity: 1
+	70%
+		opacity: 0
+	80%
+		opacity: 1
+	90%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(opacity-show-1)
+	0%
+		opacity: 0
+	10%
+		opacity: 1
+	60%
+		opacity: 1
+	80%
+		opacity: 1
+	90%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(opacity-show-2)
+	0%
+		opacity: 0
+	10%
+		opacity: 0
+	20%
+		opacity: 1
+	80%
+		opacity: 1
+	90%
+		opacity: 0
+	100%
+		opacity: 0
++keyframes(opacity-show-3)
+	0%
+		opacity: 0
+	20%
+		opacity: 0
+	30%
+		opacity: 1
+	80%
+		opacity: 1
+	90%
+		opacity: 0
+	100%
+		opacity: 0
++keyframes(opacity-show-4)
+	0%
+		opacity: 0
+	30%
+		opacity: 0
+	40%
+		opacity: 1
+	80%
+		opacity: 1
+	90%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(fnum-show-1)
+	0%
+		opacity: 0
+	10%
+		opacity: 1
+	30%
+		opacity: 1
+	35%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(bnum-show-1)
+	0%
+		opacity: 0
+	10%
+		opacity: 1
+	25%
+		opacity: 1
+	30%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(bnum-show-2)
+	0%
+		opacity: 0
+	25%
+		opacity: 0
+	30%
+		opacity: 1
+	35%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(bnum-show-3)
+	0%
+		opacity: 0
+	30%
+		opacity: 0
+	35%
+		opacity: 1
+	40%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(bnum-show-4)
+	0%
+		opacity: 0
+	35%
+		opacity: 0
+	40%
+		opacity: 1
+	80%
+		opacity: 1
+	90%
+		opacity: 1
+	100%
+		opacity: 1
+
++keyframes(fnum-show-2)
+	0%
+		opacity: 0
+	30%
+		opacity: 0
+	35%
+		opacity: 1
+	80%
+		opacity: 1
+	100%
+		opacity: 1
+
++keyframes(sun-cover-1)
+	0%
+		opacity: 0
+	35%
+		opacity: 0
+		+transform(translate(0,-5px))
+	45%
+		opacity: 1
+		+transform(translate(0,0px))
+	80%
+		opacity: 1
+	90%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(man-walking-1)
+	0%
+		transform: translate(0px,0px) rotateY(180deg)
+		background-image: url("../images/isoman.png")
+	50%
+		transform: translate(35px,18px) rotateY(180deg)
+		background-image: url("../images/isoman.png")
+	50.0001%
+		transform: translate(35px,18px) rotateY(180deg)
+		background-image: url("../images/isoman2.png")
+	100%
+		transform: translate(0px,0px) rotateY(180deg)
+		background-image: url("../images/isoman2.png")
+
++keyframes(man-walking-frame-1)
+	0%
+		background-position: 0% 0
+	25%
+		background-position: 0% 0
+	25.00001%
+		background-position: 40% 0
+	50%
+		background-position: 40% 0
+	50.00001%
+		background-position: 20% 0
+	75%
+		background-position: 20% 0
+	75.00001%
+		background-position: 40% 0
+	99.9999%
+		background-position: 40% 0
+	100%
+		background-position: 0% 0
+
++keyframes(man-walking-emoji-1)
+	0%
+		opacity: 0
+	5%
+		opacity: 1
+	55%
+		opacity: 1
+	65%
+		opacity: 0
+	95%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(extraction-bottle-fill)
+	0%
+		opacity: 0
+	75%
+		opacity: 0
+	90%
+		opacity: 1
+	95%
+		opacity: 1
+	100%
+		opacity: 0
+
++keyframes(extraction-flower-move)
+	0%
+		transform: translate(0px,0px)
+	30%
+		opacity: 1
+		transform: translate(8px,-4px)
+	100%
+		opacity: 0
+		transform: translate(8px,-4px)
+
++keyframes(earth-jump-move)
+	0%
+		+transform(translate(0,0px))
+	50%
+		+transform(translate(0,-3px))
+	100%
+		+transform(translate(0,0px))
+
++keyframes(solar-line-move)
+	0%
+		+transform(translate(-100%,100%))
+	100%
+		+transform(translate(0px,0px))
+
++keyframes(cloud-move-right-1)
+	0%
+		+transform(translate(-30px,0px))
+		opacity: 0
+	40%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
+
++keyframes(cloud-move-right-2)
+	10%
+		+transform(translate(-30px,0px))
+		opacity: 0
+	50%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
++keyframes(cloud-move-right-3)
+	20%
+		+transform(translate(-30px,0px))
+		opacity: 0
+	60%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
++keyframes(cloud-move-right-4)
+	30%
+		+transform(translate(-30px,0px))
+		opacity: 0
+	70%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
+
+
++keyframes(cloud-move-left-1)
+	5%
+		+transform(translate(30px,0px))
+		opacity: 0
+	45%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
+
++keyframes(cloud-move-left-2)
+	15%
+		+transform(translate(30px,0px))
+		opacity: 0
+	55%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
+
++keyframes(cloud-move-left-3)
+	25%
+		+transform(translate(30px,0px))
+		opacity: 0
+	65%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
+
++keyframes(cloud-move-left-4)
+	35%
+		+transform(translate(30px,0px))
+		opacity: 0
+	75%
+		+transform(translate(0px,0px))
+		opacity: 1
+	95%
+		+transform(translate(0px,0px))
+		opacity: 1
+	100%
+		+transform(translate(0px,0px))
+		opacity: 0
+
++keyframes(sun-raise)
+	40%
+		+transform(translate(-10px,0px))
+		opacity: 0
+	90%
+		+transform(translate(-10px,-40px))
+		opacity: 1
+	95%
+		+transform(translate(-10px,-40px))
+		opacity: 1
+	100%
+		+transform(translate(-10px,-40px))
+		opacity: 0
+
++keyframes(lab-show-1)
+	0%
+		opacity: 1
+	25%
+		opacity: 1
+	35%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(lab-show-2)
+	0%
+		opacity: 0
+	25%
+		opacity: 0
+	35%
+		opacity: 1
+	45%
+		opacity: 1
+	55%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(lab-show-3)
+	0%
+		opacity: 0
+	55%
+		opacity: 0
+	65%
+		opacity: 1
+	100%
+		opacity: 1
+
++keyframes(lab-show-4)
+	65%
+		+transform(translate(0px,0px))
+	75%
+		+transform(translate(-5px,2.5px))
+	100%
+		+transform(translate(-5px,2.5px))
+
++keyframes(firework-show)
+	0%
+		opacity: 0
+	5%
+		opacity: 1
+	15%
+		opacity: 1
+	30%
+		opacity: 0
+	100%
+		opacity: 0
+
++keyframes(train-run)
+	10%
+		+transform(translate(65px,-20px))
+		opacity: 0
+	30%
+		+transform(translate(65px,-20px))
+		opacity: 1
+	90%
+		+transform(translate(0px,23px))
+		opacity: 1
+	100%
+		+transform(translate(0px,23px))
+		opacity: 1
+
++keyframes(door-open)
+	0%
+		transform: translateY(0)
+	60%
+		transform: translateY(-9px)
+	100%
+		transform: translateY(-9px)
+
++keyframes(truckmove-route1)
+	0%
+		top: 1508px
+		left: 1005px
+		background-position: 0 0
+	25%
+		top: 1778px
+		left: 1475px
+		background-position: 0 0
+	25.0001%
+		top: 1778px
+		left: 1499px
+		background-position: 0 33%
+	40%
+		top: 1613px
+		left: 1785px
+		background-position: 0 33%
+	40.0001%
+		top: 1613px
+		left: 1802px
+		background-position: 0 0
+	47.5%
+		top: 1692px
+		left: 1936px
+		background-position: 0 0
+	47.5001%
+		top: 1692px
+		left: 1953px
+		background-position: 0 33%
+	77%
+		top: 1450px
+		left: 2370px
+		+transform(rotate(0))
+	77.0001%
+		top: 1450px
+		left: 2370px
+		+transform(rotate(-25deg))
+	80%
+		top: 1366px
+		left: 2427px
+		+transform(rotate(-25deg))
+	80.0001%
+		top: 1353px
+		left: 2437px
+		+transform(rotate(0))
+	85%
+		top: 1283px
+		left: 2559px
+		background-position: 0 33%
+	85.0001%
+		top: 1273px
+		left: 2559px
+		background-position: 0 67%
+	100%
+		top: 1049px
+		left: 2168px
+		background-position: 0 67%
+
++keyframes(truckmove-route2)
+	0%
+		top: 1067px
+		left: 2126px
+		background-position: 0 0
+	17%
+		top: 1277px
+		left: 2488px
+		background-position: 0 0
+	17.0001%
+		top: 1282px
+		left: 2488px
+		background-position: 0 100%
+	21%
+		top: 1332px
+		left: 2406px
+		+transform(rotate(0))
+	21.0001%
+		top: 1339px
+		left: 2393px
+		+transform(rotate(-25deg))
+	25%
+		top: 1415px
+		left: 2345px
+		+transform(rotate(-25deg))
+	25.0001%
+		top: 1424px
+		left: 2343px
+		+transform(rotate(0))
+	45%
+		top: 1650px
+		left: 1956px
+		background-position: 0 100%
+	45.0001%
+		top: 1650px
+		left: 1938px
+		background-position: 0 67%
+	80%
+		top: 1108px
+		left: 1000px
+		background-position: 0 67%
+	80.0001%
+		top: 1098px
+		left: 996px
+		background-position: 0 33%
+	90%
+		top: 929px
+		left: 1291px
+		background-position: 0 33%
+	90.0001%
+		top: 924px
+		left: 1287px
+		background-position: 0 67%
+	100%
+		top: 791px
+		left: 1063px
+		background-position: 0 67%
+
++keyframes(truckmove-route3)
+	0%
+		top: 1067px
+		left: 2126px
+		background-position: 0 0
+	17%
+		top: 1277px
+		left: 2488px
+		background-position: 0 0
+	17.0001%
+		top: 1282px
+		left: 2488px
+		background-position: 0 100%
+	21%
+		top: 1332px
+		left: 2406px
+		+transform(rotate(0))
+	21.0001%
+		top: 1339px
+		left: 2393px
+		+transform(rotate(-25deg))
+	25%
+		top: 1415px
+		left: 2345px
+		+transform(rotate(-25deg))
+	25.0001%
+		top: 1424px
+		left: 2343px
+		+transform(rotate(0))
+	45%
+		top: 1650px
+		left: 1956px
+		background-position: 0 100%
+	45.0001%
+		top: 1650px
+		left: 1938px
+		background-position: 0 67%
+	80%
+		top: 1108px
+		left: 1000px
+		background-position: 0 67%
+	80.0001%
+		top: 1098px
+		left: 996px
+		background-position: 0 33%
+	84%
+		top: 1064px
+		left: 1057px
+		background-position: 0 33%
+	84.0001%
+		top: 1053px
+		left: 1057px
+		background-position: 0 67%
+	100%
+		top: 797px
+		left: 607px
+		background-position: 0 67%
+
++keyframes(truckmove-route4)
+	0%
+		top: 791px
+		left: 989px
+		background-position: 0 0
+	35%
+		top: 945px
+		left: 1254px
+		background-position: 0 0
+	35.0001%
+		top: 945px
+		left: 1267px
+		background-position: 0 33%
+	75%
+		top: 712px
+		left: 1663px
+		background-position: 0 33%
+	75.0001%
+		top: 697px
+		left: 1663px
+		background-position: 0 67%
+	95%
+		top: 628px
+		left: 1539px
+		background-position: 0 67%
+	100%
+		top: 628px
+		left: 1539px
+		background-position: 0 67%
+
++keyframes(airplane-fly)
+	0%
+		opacity: 1
+		+transform(translate(0,0) rotate(0deg))
+	35%
+		opacity: 1
+		+transform(translate(-202px,120px) rotate(00deg))
+	45%
+		opacity: 1
+		+transform(translate(-230px,120px) rotate(30deg))
+	70%
+		opacity: 1
+		+transform(translate(-602px,40px) rotate(30deg))
+	80%
+		opacity: 0
+		+transform(translate(-702px,20px) rotate(30deg))
+	90%
+		opacity: 0
+		+transform(translate(-702px,20px) rotate(30deg))
+	90.0001%
+		opacity: 0
+		+transform(translate(0,0) rotate(0deg))
+	100%
+		opacity: 1
+		+transform(translate(0,0) rotate(0deg))
+
++keyframes(factory-truck-go)
+	0%
+		+transform(translate(0,0))
+		opacity: 1
+	30%
+		+transform(translate(0,0))
+		opacity: 1
+	70%
+		+transform(translate(-16px,12px))
+		opacity: 1
+	99.999%
+		+transform(translate(-16px,12px))
+		opacity: 1
+	100%
+		+transform(translate(-16px,12px))
+		opacity: 0
