@@ -3,19 +3,19 @@ var building_path = ["store-taipei","taipei_city","future-experience","extractio
 
 var pathArray = window.location.pathname.split( '/' );
 var stateObj = { page: "./" };
-history.pushState(stateObj, "page", "./");
+// history.pushState(stateObj, "page", "./");
 if(stateObj['page'] == "./" && pathArray[pathArray.length-1]) {
-	var flag = true;
-	flag = building_path.indexOf(pathArray[pathArray.length-1]) > -1 ? true : false;
+	// var flag = true;
+	// flag = building_path.indexOf(pathArray[pathArray.length-1]) > -1 ? true : false;
 
 
-	if(flag){
-		history.pushState(stateObj, "page", pathArray[pathArray.length-1]);
-		stateObj['page'] = pathArray[pathArray.length-1];
-	}else {
-		history.pushState(stateObj, "page", "./");
+	// if(flag){
+	// 	history.pushState(stateObj, "page", pathArray[pathArray.length-1]);
+	// 	stateObj['page'] = pathArray[pathArray.length-1];
+	// }else {
+	// 	history.pushState(stateObj, "page", "./");
+	// }
 
-	}
 	// console.log(currentState);
 }
 if(stateObj['page'] == "./" && !pathArray[pathArray.length-1]) {
@@ -223,7 +223,7 @@ $(document).ready(function(){
 					title: "檢測器材",
 					direction: "righttop",
 					position: {left: "69%", top: "43%"},
-					content: "除了確保原料的功效品質，我們更重視產品的安全性，而實驗室的高科技器材可對萃取材料進行更有效的檢測。<img class='content-img' src='hhttps://picsum.photos/600/400?image=976'/>"
+					content: "除了確保原料的功效品質，我們更重視產品的安全性，而實驗室的高科技器材可對萃取材料進行更有效的檢測。<img class='content-img' src='https://picsum.photos/600/400?image=976'/>"
 				},
 				{
 					title: "微生物檢測",
@@ -471,8 +471,8 @@ $(document).ready(function(){
 
 					$(".intro").slideUp(300);
 
-					// window.location.hash = building.title;
-					history.pushState(stateObj, "page 2", building.title);
+					window.location.hash = building.title;
+					// history.pushState(stateObj, "page 2", building.title);
 
 					now_scale = 1;
 
@@ -501,7 +501,7 @@ $(document).ready(function(){
 
 
 
-					console.log(dom.height());
+					// console.log(dom.height());
 
 					now_active_building = building;
 
@@ -537,8 +537,10 @@ $(document).ready(function(){
 					};
 
 					//萃取廠用
-					extraction_init();
-					extraction_animate();
+					if (building.title === "extraction") {
+						extraction_init();
+						extraction_animate();
+					}
 				};
 
 				function building_active(){
@@ -577,19 +579,19 @@ $(document).ready(function(){
 					$("#menu").removeClass('active');
 				});
 
-				// if(window.location.hash == "#"+building.title) {
-				// 	tap_pos();
-				// 	building_active();
-				// }
-				// $(window).on('hashchange', function(e) {
-				// 	e.preventDefault();
-				//   if(window.location.hash == "#"+building.title){
+				if(window.location.hash == "#"+building.title) {
+					tap_pos();
+					building_active();
+				}
+				$(window).on('hashchange', function(e) {
+					e.preventDefault();
+					if(window.location.hash == "#"+building.title){
 
-				//   	layer_close();
-				//   	tap_pos();
-				// 		building_active();
-				//   }
-				// });
+						layer_close();
+						tap_pos();
+						building_active();
+					}
+				});
 				// console.log(currentState);
 
 				if(stateObj['page'] == building.title) {
@@ -717,8 +719,8 @@ $(document).ready(function(){
 	});
 
 	function clean_hash(){
-		// window.location.hash = "";
-		history.pushState(stateObj, "page", "./");
+		window.location.hash = "";
+		// history.pushState(stateObj, "page", "./");
 	}
 
 	function layer_close(){
@@ -850,6 +852,8 @@ $(document).ready(function(){
 			}
 		})
 	}
+
+	$('.footer-year').html(new Date().getFullYear());
 })
 
 $(window).load(function(){
